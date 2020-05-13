@@ -1,0 +1,80 @@
+<div class="container-fluid">
+    <h1 class="text-center" style="color:white">
+        To-Do App
+    </h1>
+    <div class="container border1" style="margin-top:15px">
+        <div class="row">
+
+            <div class="col-3 border2">
+                <div class="d-flex justify-content-between">
+                    <span>
+                        <h3 class="d-flex justify-content-around txtCenter"
+                            style="color:rgb(255, 255, 255); margin-top:8px">Saved lists
+                        </h3>
+                        <h6 class="d-flex justify-content-around txtCenter" style="color:rgba(255, 255, 255, 0.507)">No
+                            saved lists</h6>
+                        <div id="injectionArea"></div>
+                        <div id="exampleDiv"></div>
+                    </span>
+
+                    <button onclick="loadElement()" type="button" class="btn btn-secondary btn2"
+                        style="margin-top:1em; font-size:14px; padding-right:3em; padding-bottom:2em"
+                        id="load">Load</button>
+                </div>
+            </div>
+
+            <div class="col-6 border align-self-start">
+                <div class="d-flex justify-content-between">
+                    <div class="col-3">
+                        <button type="button" style="margin-top:1em"
+                            class="btn btn-danger btn1" id="delete">Delete</button>
+                    </div>
+
+                    <div class="col-6">
+                        <span>
+                            <div class="row">
+                                <h5 class="border-bottom border-dark d-flex justify-content-center txtCenter"
+                                    style="color:rgba(231, 225, 225, 0.856)">Enter Your tasks below</h1>
+                                    <input type="text" id="myInput" class="form-control" placeholder="Add Something..."
+                                        style="margin-bottom:20px; margin-left:.5em">
+                            </div>
+                            <button onclick="newElement()" type="button" style="margin-bottom:1em; margin-left:4em"
+                                class="btn btn-secondary" id="add">Add</button>
+                        </span>
+                    </div>
+
+                    <div class="col-3">
+                        <button onclick="saveElement()" type="button" style="margin-top:1em"
+                            class="btn btn-success btn1" data-toggle="modal" data-target="#exampleModal"
+                            id="saveBtn">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 border3 border1R">
+                <ul id="myUL" style="margin-top:1em"></ul>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" style="margin-left:10.5em" id="exampleModalLabel">Save List</h5>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" style="margin-left:9.5em" id="title"></input>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="saveList" type="button" data-dismiss="modal"
+                                class="btn btn-secondary modalBtn">Save</button>
+                            <button type="button" class="btn btn-secondary modalBtn"
+                                data-dismiss="modal">Cancel</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
